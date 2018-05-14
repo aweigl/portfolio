@@ -1,9 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import browserRouter from "react-browser-router";
+import Header from "./header";
 
 class Main extends React.Component {
     render() {
-        return <div>Stephanie Hartung</div>;
+        return <Header />;
     }
 }
 

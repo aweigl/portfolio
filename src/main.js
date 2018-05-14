@@ -1,5 +1,6 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
+import Footer from "./footer";
 import Bio from "./bio";
 import Koeln from "./koeln";
 
@@ -9,7 +10,9 @@ function Main() {
             <Route exact path="/bio" component={Bio} />
             <Route exact path="/koeln" component={Koeln} />
             <div className="banner">
-                <img src="/images/Koeln/KoelnKoelnerWirMain.jpg" />
+                <Link to="/koeln">
+                    <img src="/images/Koeln/KoelnKoelnerWirMain.jpg" />
+                </Link>
                 <img src="/images/Stellland/StelllandMain.jpg" />
                 <img src="/images/Dirak/DirakMain.jpg" />
                 <img src="/images/Loschelder/LoschelderMain.jpg" />

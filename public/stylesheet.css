@@ -18,7 +18,7 @@ body {
 }
 
 .name {
-    grid-column: 2;
+    margin-left: 5px;
     font-size: 35px;
     text-decoration: none;
     color: black;
@@ -26,6 +26,7 @@ body {
 }
 
 .menuContainer {
+    grid-column: 3;
     display: grid;
     justify-content: end;
     position: relative;
@@ -33,7 +34,7 @@ body {
 
 #menu {
     height: 35px;
-    margin: auto
+    /* margin: auto */
 }
 
 #menu:hover {
@@ -66,13 +67,14 @@ body {
 
 .main {
     position: relative;
-    height: 100%;
+    height: 100vh;
 }
 
 /* banner */
 
 .banner img {
-    width: 20%
+    width: 19%;
+    margin: 0 5px;
 }
 
 .banner img:hover {
@@ -101,6 +103,34 @@ body {
     width: 270px;
     font-size: 20px;
     text-align: justify;
+}
+
+/* Koeln */
+
+.koelnComponent {
+    position: absolute;
+    z-index: 1;
+    background: rgba(255, 255, 255, 1);
+    height: 100%;
+    width: 100%;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center
+}
+
+.imageContainer img {
+    max-height: 30vh
+}
+
+.arrowKeys {
+    height: 35px
+}
+
+.arrowKeys:hover {
+    cursor: pointer;
+    opacity: 0.8
 }
 
 /* footer */

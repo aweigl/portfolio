@@ -9,7 +9,7 @@ class Header extends React.Component {
     }
     componentDidMount() {
         document.addEventListener("click", e => {
-            if (e.target != this.burger) {
+            if (e.target !== this.burger) {
                 this.setState({
                     openMenu: false
                 });

@@ -31,6 +31,15 @@ class Header extends React.Component {
     render() {
         return (
             <header className="header">
+                <div class="spinner-master">
+                    <input type="checkbox" id="spinner-form" />
+                    <label for="spinner-form" class="spinner-spin">
+                        <div class="spinner diagonal part-1" />
+                        <div class="spinner horizontal" />
+                        <div class="spinner diagonal part-2" />
+                    </label>
+                </div>
+
                 <Link to="/" className="name">
                     STEPHANIE HARTUNG
                 </Link>

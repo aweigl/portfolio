@@ -26,34 +26,18 @@ body {
 .header {
     display: grid;
     grid-template-columns: repeat(3, 33%);
-    margin: 30px 0;
+    height: 120px;
+    border-bottom: 1px solid gainsboro;
 }
 
 .name {
+    display: flex;
     margin-left: 5px;
     font-size: 35px;
     text-decoration: none;
     color: black;
     font-family: "Roboto" !important;
-}
-
-.icons {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-
-#twitter {
-    color: #0097f0;
-    text-decoration: none;
-    font-size: 30px;
-}
-
-#linkedIn {
-    color: #006bac;
-    text-decoration: none;
-    font-size: 30px;
-    margin-left: 5px;
+    align-items: center;
 }
 
 .menuContainer {
@@ -64,7 +48,9 @@ body {
 }
 
 #menu {
+    display: flex;
     height: 35px;
+    align-self: center;
 }
 
 #menu:hover {
@@ -76,8 +62,9 @@ body {
     z-index: 2;
     position: absolute;
     right: 0px;
-    top: 50px;
+    top: 90px;
     text-align: right;
+    animation: textOpacity 2s
 }
 
 .menuLinks a {
@@ -108,11 +95,16 @@ body {
 /* banner */
 
 .banner {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+    border-bottom: 1px solid gainsboro;
+    padding: 10vh 0;
 }
 
 .banner img {
-    width: 98%;
+    margin: 0 50px;
+    max-height: 350px;
     border: 1px solid gainsboro;
 }
 
@@ -128,7 +120,8 @@ body {
 
 .infoBoxes {
     display: grid;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(6, auto);
+    margin-top: 50px
 }
 
 .infoBoxes div {
@@ -260,14 +253,32 @@ body {
 .footerContainer {}
 
 .footer {
-    text-align: center;
-    background-color: grey;
-    height: 25px;
+    border-top: 1px solid gainsboro;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer span {
     margin-right: 10px;
-    color: white;
+}
+
+.icons {
+    justify-self: flex-end;
+}
+
+#twitter {
+    color: #0097f0;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+#linkedIn {
+    color: #006bac;
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 5px;
 }
 
 .CR {
@@ -293,4 +304,71 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+.spinner-master * {
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.spinner-master {
+    position: relative;
+    margin: 50px auto;
+    height: 50px;
+    width: 50px;
+}
+
+.spinner-master input[type=checkbox] {
+    display: none;
+}
+
+.spinner-master label {
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 10px;
+    left: 0;
+}
+
+.spinner-master .spinner {
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background-color: #000;
+}
+
+.spinner-master .diagonal.part-1 {
+    position: relative;
+    float: left;
+}
+
+.spinner-master .horizontal {
+    position: relative;
+    float: left;
+    margin-top: 6px;
+}
+
+.spinner-master .diagonal.part-2 {
+    position: relative;
+    float: left;
+    margin-top: 6px;
+}
+
+.spinner-master input[type=checkbox]:checked~.spinner-spin>.horizontal {
+    opacity: 0;
+}
+
+.spinner-master input[type=checkbox]:checked~.spinner-spin>.diagonal.part-1 {
+    transform: rotate(405deg);
+    -webkit-transform: rotate(405deg);
+    margin-top: 10px;
+}
+
+.spinner-master input[type=checkbox]:checked~.spinner-spin>.diagonal.part-2 {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg);
+    margin-top: -16px;
 }

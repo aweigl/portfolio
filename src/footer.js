@@ -4,9 +4,10 @@ export default function Footer() {
     return (
         <footer className="footerContainer">
             <div className="footer">
-                <span>Kontakt</span>
+                <div className="CR">© 2018 Aaron Weigl</div>
                 <span>Impressum</span>
                 <div className="icons">
+                    <i id="mail" className="far fa-envelope" size="3x" />
                     <a href="https://twitter.com/stephhartung">
                         <i id="twitter" className="fab fa-twitter" />
                     </a>
@@ -15,7 +16,6 @@ export default function Footer() {
                     </a>
                 </div>
             </div>
-            <div className="CR">© 2018 Aaron Weigl</div>
         </footer>
     );
 }

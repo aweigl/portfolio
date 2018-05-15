@@ -9,6 +9,15 @@ class Koeln extends React.Component {
         this.next = this.next.bind(this);
         this.prev = this.prev.bind(this);
     }
+    componentDidMount() {
+        document.addEventListener("keyup", e => {
+            if (e.keyCode == 39) {
+                this.next();
+            } else if (e.keyCode == 37) {
+                this.prev();
+            }
+        });
+    }
     next() {
         this.state.imageId === 4
             ? this.setState({
@@ -33,18 +42,13 @@ class Koeln extends React.Component {
     }
     render() {
         return (
-            <div className="koelnComponent">
-                <div className="imageContainer">
-                    <img
-                        className="arrowKeys"
-                        src="arrowLeft.png"
-                        onClick={this.prev}
-                    />
+            <div className="Component">
+                <div className="imageContainer" id="koeln">
+                    <div className="arrowKeys">
+                        <img src="arrowLeft.png" onClick={this.prev} />
+                    </div>
                     {this.state.imageId == 1 && (
-                        <img
-                            id="1"
-                            src="images/Koeln/KoelnKoelnerWirMain.jpg"
-                        />
+                        <img id="1" src="images/Koeln/KoelnKoelnerWir2.jpg" />
                     )}
 
                     {this.state.imageId == 2 && (
@@ -57,13 +61,11 @@ class Koeln extends React.Component {
                     {this.state.imageId == 4 && (
                         <img id="4" src="images/Koeln/KoelnKoelnerWir5.jpg" />
                     )}
-                    <img
-                        className="arrowKeys"
-                        src="arrowRight.png"
-                        onClick={this.next}
-                    />
+                    <div className="arrowKeys">
+                        <img src="arrowRight.png" onClick={this.next} />
+                    </div>
                 </div>
-                <div className="KoelnText">
+                <div className="Text">
                     <h1>Konzept für eine Stadtmarketing Kampagne</h1>
                     Für meine Heimatstadt habe ich mit der Kampagne "Köln,
                     Kölner Wir" einen Vorschlag für eine Darstellung der Stadt

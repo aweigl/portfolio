@@ -34,7 +34,6 @@ class Header extends React.Component {
                 <Link to="/" className="name">
                     STEPHANIE HARTUNG
                 </Link>
-
                 <div
                     className="menuContainer"
                     ref={menuCont => (this.menuContainer = menuCont)}

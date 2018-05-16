@@ -3,12 +3,14 @@ const info = require("./secrets.json");
 const https = require("https");
 const axios = require("axios");
 const nodemailer = require("nodemailer");
+const bodyParser = require("body-parser");
 
 const app = express();
 const port = process.env.PORT || 3001;
 
 let corsMiddleware = (req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
     next();
 };
 
@@ -22,15 +24,22 @@ let transporter = nodemailer.createTransport({
     }
 });
 
+app.use(
+    bodyParser.urlencoded({
+        extended: true
+    })
+);
+
+app.use(bodyParser.json());
+
 app.post("/api", corsMiddleware, (req, res) => {
-    console.log("tOp");
-    // setup email data with unicode symbols
+    console.log(req.body);
     let mailOptions = {
-        from: "testing@test.com", // sender address
         to: "a.weigl1991@gmail.com", // list of receivers
-        subject: "Hello ✔", // Subject line
-        text: "Hello world?", // plain text body
-        html: "<b>Hello world?</b>" // html body
+        subject: `${req.body.subject}`, // Subject line
+        text: `${req.body.message} send by ${req.body.name}/${
+            req.body.mail
+        } at ${new Date()}` // plain text body
     };
 
     // send mail with defined transport object
@@ -45,4 +54,8 @@ app.post("/api", corsMiddleware, (req, res) => {
     });
 });
 
+app.options("/api", corsMiddleware, (req, res, next) => {
+    console.log("options logging");
+    res.sendStatus(200);
+});
 app.listen(port, () => console.log(`Listening on port ${port}`));

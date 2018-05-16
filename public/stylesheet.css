@@ -318,6 +318,28 @@ body {
     background-color: white;
 }
 
+.inputContainer {
+    display: grid;
+    justify-content: center;
+    margin-top: 15vh
+}
+
+.mailGreeting {
+    justify-self: center;
+    margin-bottom: 100px;
+}
+
+.secondInputContainer input {
+    margin-bottom: 45px;
+    height: 5vh;
+    width: 15vw;
+}
+
+.mailMessage {
+    height: 47vh;
+    width: 72vw;
+}
+
 /* keyframes */
 
 @keyframes opacityPercentage {

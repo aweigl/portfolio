@@ -11,9 +11,9 @@ class Koeln extends React.Component {
     }
     componentDidMount() {
         document.addEventListener("keyup", e => {
-            if (e.keyCode == 39) {
+            if (e.keyCode === 39) {
                 this.next();
-            } else if (e.keyCode == 37) {
+            } else if (e.keyCode === 37) {
                 this.prev();
             }
         });
@@ -45,24 +45,40 @@ class Koeln extends React.Component {
             <div className="Component">
                 <div className="imageContainer" id="koeln">
                     <div className="arrowKeys">
-                        <img src="arrowLeft.png" onClick={this.prev} />
+                        <img alt="" src="arrowLeft.png" onClick={this.prev} />
                     </div>
-                    {this.state.imageId == 1 && (
-                        <img id="1" src="images/Koeln/KoelnKoelnerWir2.jpg" />
+                    {this.state.imageId === 1 && (
+                        <img
+                            alt=""
+                            id="1"
+                            src="images/Koeln/KoelnKoelnerWir2.jpg"
+                        />
                     )}
 
-                    {this.state.imageId == 2 && (
-                        <img id="2" src="images/Koeln/KoelnKoelnerWir3.jpg" />
+                    {this.state.imageId === 2 && (
+                        <img
+                            alt=""
+                            id="2"
+                            src="images/Koeln/KoelnKoelnerWir3.jpg"
+                        />
                     )}
 
-                    {this.state.imageId == 3 && (
-                        <img id="3" src="images/Koeln/KoelnKoelnerWir4.jpg" />
+                    {this.state.imageId === 3 && (
+                        <img
+                            alt=""
+                            id="3"
+                            src="images/Koeln/KoelnKoelnerWir4.jpg"
+                        />
                     )}
-                    {this.state.imageId == 4 && (
-                        <img id="4" src="images/Koeln/KoelnKoelnerWir5.jpg" />
+                    {this.state.imageId === 4 && (
+                        <img
+                            alt=""
+                            id="4"
+                            src="images/Koeln/KoelnKoelnerWir5.jpg"
+                        />
                     )}
                     <div className="arrowKeys">
-                        <img src="arrowRight.png" onClick={this.next} />
+                        <img alt="" src="arrowRight.png" onClick={this.next} />
                     </div>
                 </div>
                 <div className="Text">

@@ -11,9 +11,9 @@ class Stellland extends React.Component {
     }
     componentDidMount() {
         document.addEventListener("keyup", e => {
-            if (e.keyCode == 39) {
+            if (e.keyCode === 39) {
                 this.next();
-            } else if (e.keyCode == 37) {
+            } else if (e.keyCode === 37) {
                 this.prev();
             }
         });
@@ -45,34 +45,47 @@ class Stellland extends React.Component {
             <div className="Component">
                 <div className="imageContainer" id="stellland">
                     <div className="arrowKeys">
-                        <img src="arrowLeft.png" onClick={this.prev} />
+                        <img alt="" src="arrowLeft.png" onClick={this.prev} />
                     </div>
-                    {this.state.imageId == 1 && (
-                        <img id="1" src="images/Stellland/STELLLAND Nr.6.jpg" />
-                    )}
-
-                    {this.state.imageId == 2 && (
-                        <img id="2" src="images/Stellland/STELLLAND Nr.7.jpg" />
-                    )}
-
-                    {this.state.imageId == 3 && (
+                    {this.state.imageId === 1 && (
                         <img
+                            alt=""
+                            id="1"
+                            src="images/Stellland/STELLLANDNr6.jpg"
+                        />
+                    )}
+
+                    {this.state.imageId === 2 && (
+                        <img
+                            alt=""
+                            id="2"
+                            src="images/Stellland/STELLLANDNr7.jpg"
+                        />
+                    )}
+
+                    {this.state.imageId === 3 && (
+                        <img
+                            alt=""
                             id="3"
                             src="images/Stellland/Stellland-Doppel3.jpg"
                         />
                     )}
-                    {this.state.imageId == 4 && (
+                    {this.state.imageId === 4 && (
                         <img
+                            alt=""
                             id="4"
                             src="images/Stellland/Stellland-Doppel6.jpg"
                         />
                     )}
-                    {this.state.imageId == 5 && (
-                        <img src="images/Stellland/Stellland-Doppel5.jpg" />
+                    {this.state.imageId === 5 && (
+                        <img
+                            alt=""
+                            src="images/Stellland/Stellland-Doppel5.jpg"
+                        />
                     )}
 
                     <div className="arrowKeys">
-                        <img src="arrowRight.png" onClick={this.next} />
+                        <img alt="" src="arrowRight.png" onClick={this.next} />
                     </div>
                 </div>
                 <div className="Text">

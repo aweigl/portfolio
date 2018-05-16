@@ -321,7 +321,14 @@ body {
 .inputContainer {
     display: grid;
     justify-content: center;
-    margin-top: 15vh
+    margin-top: 12vh
+}
+
+.inputPicture {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-right: 6vw;
 }
 
 .mailGreeting {
@@ -329,10 +336,24 @@ body {
     margin-bottom: 100px;
 }
 
+.greeting1 {
+    font-size: 30px;
+    margin-bottom: 4vh
+}
+
+.greeting2 {
+    font-size: 23px;
+    text-align: center
+}
+
 .secondInputContainer input {
     margin-bottom: 45px;
     height: 5vh;
     width: 15vw;
+}
+
+.secondInputContainer ::placeholder {
+    font-size: 15px
 }
 
 .mailMessage {
@@ -425,5 +446,8 @@ body {
     }
     #text6 {
         line-height: 34px;
+    }
+    .inputPicture {
+        margin-right: 0
     }
 }

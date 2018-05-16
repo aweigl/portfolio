@@ -37,9 +37,9 @@ app.post("/api", corsMiddleware, (req, res) => {
     let mailOptions = {
         to: "a.weigl1991@gmail.com", // list of receivers
         subject: `${req.body.subject}`, // Subject line
-        text: `${req.body.message} send by ${req.body.name}/${
-            req.body.mail
-        } at ${new Date()}` // plain text body
+        text: `${req.body.message} 
+        gesendet von
+         ${req.body.name}/${req.body.mail} um ${new Date()}` // plain text body
     };
 
     // send mail with defined transport object
@@ -55,7 +55,6 @@ app.post("/api", corsMiddleware, (req, res) => {
 });
 
 app.options("/api", corsMiddleware, (req, res, next) => {
-    console.log("options logging");
     res.sendStatus(200);
 });
 app.listen(port, () => console.log(`Listening on port ${port}`));

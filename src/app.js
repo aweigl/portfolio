@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./header";
 import Main from "./main";
 import Footer from "./footer";
-import { BrowserRouter, Link, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 class App extends React.Component {
     render() {

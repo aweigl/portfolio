@@ -5,7 +5,7 @@ class Bio extends React.Component {
         return (
             <div className="Bio">
                 <div className="bioImg">
-                    <img src="bio.webp" />
+                    <img alt="" src="bio.webp" />
                 </div>
                 <div className="bioText">
                     Auf dieser Website zeige ich Ihnen grafische Arbeiten von

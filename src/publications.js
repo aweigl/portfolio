@@ -5,7 +5,7 @@ export default function Publications() {
         <div className="infoBoxes">
             <div className="box">
                 <div>
-                    <img src="Books/Starke-Marken.jpg" />
+                    <img alt="" src="Books/Starke-Marken.jpg" />
                     <div className="textBorder">
                         <p id="text1">
                             <strong>
@@ -26,7 +26,7 @@ export default function Publications() {
             </div>
             <div className="box">
                 <div>
-                    <img src="Books/buch3.jpg" />
+                    <img alt="" src="Books/buch3.jpg" />
                     <div className="textBorder">
                         <p id="text2">
                             <strong>
@@ -42,7 +42,7 @@ export default function Publications() {
             </div>
             <div className="box">
                 <div>
-                    <img src="Books/Kanzlei.jpg" />
+                    <img alt="" src="Books/Kanzlei.jpg" />
                     <div className="textBorder">
                         <p id="text3">
                             <strong>
@@ -64,7 +64,7 @@ export default function Publications() {
             </div>
             <div className="box">
                 <div>
-                    <img src="Books/buch2.jpg" />
+                    <img alt="" src="Books/buch2.jpg" />
                     <div className="textBorder">
                         <p id="text4">
                             <strong>
@@ -82,7 +82,7 @@ export default function Publications() {
             </div>
             <div className="box">
                 <div>
-                    <img src="Books/Friedlaender-Gestalt.jpg" />
+                    <img alt="" src="Books/Friedlaender-Gestalt.jpg" />
                     <div className="textBorder">
                         <p id="text5">
                             <strong>Die Kanzlei als erfolgreiche Marke</strong>
@@ -99,7 +99,7 @@ export default function Publications() {
             </div>
             <div className="box">
                 <div>
-                    <img src="Books/buch1.jpg" />
+                    <img alt="" src="Books/buch1.jpg" />
                     <div className="textBorder">
                         <p id="text6">
                             <strong>

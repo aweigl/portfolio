@@ -23,7 +23,7 @@ class Koeln extends React.Component {
         setTimeout(() => {
             this.next();
             this.auto();
-        }, 7000);
+        }, 5000);
     }
     next() {
         this.state.imageId === 4

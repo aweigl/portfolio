@@ -11,10 +11,13 @@ export default function Footer() {
                     <Link to="/mail">
                         <i id="mail" className="far fa-envelope" size="3x" />
                     </Link>
-                    <a href="https://twitter.com/stephhartung">
+                    <a href="https://twitter.com/stephhartung" target="_blank">
                         <i id="twitter" className="fab fa-twitter" />
                     </a>
-                    <a href="https://www.linkedin.com/in/stephaniehartung/">
+                    <a
+                        href="https://www.linkedin.com/in/stephaniehartung/"
+                        target="_blank"
+                    >
                         <i id="linkedIn" className="fab fa-linkedin" />
                     </a>
                 </div>

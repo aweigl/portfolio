@@ -12,6 +12,7 @@
 /* body */
 
 body {
+    margin: 0;
     position: relative
 }
 
@@ -19,6 +20,20 @@ body {
 
 .App {
     position: relative;
+}
+
+/* background */
+
+.background {
+    width: 105vw;
+    height: 105vh;
+    overflow: hidden;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    animation: textOpacity 3s
 }
 
 /* header */

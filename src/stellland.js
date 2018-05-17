@@ -17,6 +17,13 @@ class Stellland extends React.Component {
                 this.prev();
             }
         });
+        this.auto();
+    }
+    auto() {
+        setTimeout(() => {
+            this.next();
+            this.auto();
+        }, 7000);
     }
     next() {
         this.state.imageId === 5
@@ -42,11 +49,30 @@ class Stellland extends React.Component {
     }
     render() {
         return (
-            <div className="Component">
+            <div className="Component" id="stellland">
+                <div className="Text" id="stellland">
+                    <h1>STELLAND</h1>
+                    STELLLAND Mitgliedermagazin DGfS Erscheinungsweise 4 x pro
+                    Jahr ​ Chefredaktion Bildredaktion Gestaltung +
+                    Reinzeichnung
+                    <br />
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                    nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                    sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </div>
                 <div className="imageContainer" id="stellland">
-                    <div className="arrowKeys">
+                    {/*<div className="arrowKeys">
+
                         <img alt="" src="arrowLeft.png" onClick={this.prev} />
-                    </div>
+
+                    </div>*/}
                     {this.state.imageId === 1 && (
                         <img
                             alt=""
@@ -54,7 +80,6 @@ class Stellland extends React.Component {
                             src="images/Stellland/STELLLANDNr6.jpg"
                         />
                     )}
-
                     {this.state.imageId === 2 && (
                         <img
                             alt=""
@@ -62,7 +87,6 @@ class Stellland extends React.Component {
                             src="images/Stellland/STELLLANDNr7.jpg"
                         />
                     )}
-
                     {this.state.imageId === 3 && (
                         <img
                             alt=""
@@ -84,15 +108,11 @@ class Stellland extends React.Component {
                         />
                     )}
 
-                    <div className="arrowKeys">
+                    {/*<div className="arrowKeys">
+
                         <img alt="" src="arrowRight.png" onClick={this.next} />
-                    </div>
-                </div>
-                <div className="Text">
-                    <h1>STELLAND</h1>
-                    STELLLAND Mitgliedermagazin DGfS Erscheinungsweise 4 x pro
-                    Jahr ​ Chefredaktion Bildredaktion Gestaltung +
-                    Reinzeichnung
+
+                    </div>*/}
                 </div>
             </div>
         );

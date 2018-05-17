@@ -17,6 +17,13 @@ class Koeln extends React.Component {
                 this.prev();
             }
         });
+        this.auto();
+    }
+    auto() {
+        setTimeout(() => {
+            this.next();
+            this.auto();
+        }, 7000);
     }
     next() {
         this.state.imageId === 4
@@ -43,10 +50,11 @@ class Koeln extends React.Component {
     render() {
         return (
             <div className="Component">
+                <p>Konzept für eine Stadtmarketing Kampagne</p>
                 <div className="imageContainer" id="koeln">
-                    <div className="arrowKeys">
+                    {/*<div className="arrowKeys">
                         <img alt="" src="arrowLeft.png" onClick={this.prev} />
-                    </div>
+                    </div>*/}
                     {this.state.imageId === 1 && (
                         <img
                             alt=""
@@ -77,17 +85,19 @@ class Koeln extends React.Component {
                             src="images/Koeln/KoelnKoelnerWir5.jpg"
                         />
                     )}
-                    <div className="arrowKeys">
+                    {/*<div className="arrowKeys">
                         <img alt="" src="arrowRight.png" onClick={this.next} />
-                    </div>
+                    </div>*/}
                 </div>
-                <div className="Text">
-                    <h1>Konzept für eine Stadtmarketing Kampagne</h1>
-                    Für meine Heimatstadt habe ich mit der Kampagne "Köln,
-                    Kölner Wir" einen Vorschlag für eine Darstellung der Stadt
-                    als Marke entwickelt. ​ Der Claim kann angepasst werden –
-                    anstelle des "Wir" können Firmen, einzelne Personen oder
-                    markante Gebäude der Stadt eingesetzt werden.
+                <div className="textContainer">
+                    <div className="Text">
+                        Für meine Heimatstadt habe ich mit der Kampagne "Köln,
+                        Kölner Wir" einen Vorschlag für eine Darstellung der
+                        Stadt als Marke entwickelt. ​ Der Claim kann angepasst
+                        werden – anstelle des "Wir" können Firmen, einzelne
+                        Personen oder markante Gebäude der Stadt eingesetzt
+                        werden.
+                    </div>
                 </div>
             </div>
         );

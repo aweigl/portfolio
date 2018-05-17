@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 class Mail extends React.Component {
     constructor() {
@@ -14,22 +15,44 @@ class Mail extends React.Component {
             subject: this.subject.value,
             message: this.message.value
         };
-        const response = await axios.post("http://localhost:3001/api", message);
+        const response = await axios.post(
+            "http://192.168.50.155:3001/api",
+            message
+        );
 
         if (!response.data.success) {
             console.log("No success");
         }
-        alert("Wir melden uns so schnell wie moeglich bei Ihnen");
+        this.setState({
+            mailSent: true
+        });
     }
     render() {
         return (
-            <div className="Mail">
+            <div className="Mail" id="modal">
+                {this.state.mailSent && (
+                    <div className="modalBG">
+                        <div className="confirmModal">
+                            <p>
+                                Ihre Mail wurde erfolgreich versendet! Wir
+                                melden uns schnellstmöglich bei Ihnen.
+                            </p>
+                            <Link
+                                to="/"
+                                onClick={() => {
+                                    this.setState({
+                                        mailSent: false
+                                    });
+                                }}
+                            >
+                                OK
+                            </Link>
+                        </div>
+                    </div>
+                )}
                 <div className="inputContainer">
                     <div className="mailGreeting">
-                        <div className="greeting1">KONTAKT </div>
-                        {/*<div className="greeting2">
-                            SCHICKEN SIE MIR GERNE EINE E-MAIL
-                        </div>*/}
+                        <div className="greeting1">KONTAKT</div>
                     </div>
                     <div className="secondInputContainer">
                         <div className="inputPicture">
@@ -66,7 +89,7 @@ class Mail extends React.Component {
                                     />
                                 </div>
                             </div>
-                            <img alt="" src="glasses.jpg" />
+                            <img alt="" src="glasses2.jpg" />
                         </div>
                         <div className="textarea">
                             <textarea
@@ -79,7 +102,9 @@ class Mail extends React.Component {
                             />
                         </div>
                         <div className="mailButton">
-                            <button onClick={this.sendMail}>SEND MAIL</button>
+                            <a href="#modal">
+                                <button onClick={this.sendMail}>SENDEN</button>
+                            </a>
                         </div>
                     </div>
                 </div>

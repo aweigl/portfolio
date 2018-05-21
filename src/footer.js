@@ -7,7 +7,11 @@ export default function Footer() {
                 <div className="CR">© 2018 Aaron Weigl</div>
                 <span>Impressum</span>
                 <div className="icons">
-                    <a className="mailto" href="a.weigl1991@gmail.com">
+                    <a
+                        className="mailto"
+                        href="a.weigl1991@gmail.com"
+                        target="_blank"
+                    >
                         <i id="mail" className="far fa-envelope" size="3x" />
                     </a>
                     <a

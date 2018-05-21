@@ -1,12 +1,12 @@
 const express = require("express");
-if (!process.env.PASS) {
-    const info = require("./secrets.json");
-    mail = info.mail;
-    pass = info.pass;
-} else {
-    mail = process.env.MAIL;
-    pass = process.env.PASS;
-}
+// if (!process.env.PASS) {
+const info = require("./secrets.json");
+const mail = info.mail;
+const pass = info.pass;
+// } else {
+//     mail = process.env.MAIL;
+//     pass = process.env.PASS;
+// }
 const https = require("https");
 const axios = require("axios");
 const nodemailer = require("nodemailer");

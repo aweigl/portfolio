@@ -25,15 +25,16 @@ body {
 /* background */
 
 .background {
-    width: 105vw;
-    height: 105vh;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
 }
 
 .background img {
-    width: 100%;
-    height: 100%;
-    animation: textOpacity 3s
+    width: 105%;
+    height: 110%;
+    cursor: pointer;
+    animation: textOpacity 2.5s;
 }
 
 /* header */
@@ -158,6 +159,11 @@ body {
     line-height: 25px;
 }
 
+.citation a {
+    font-family: "Verdana", sans-serif;
+    color: #827e7e;
+}
+
 .citation h1 {
     font-size: 21px;
     color: #616161
@@ -204,7 +210,8 @@ body {
 .box p {
     margin: 0;
     padding: 10px 10px;
-    font-size: 15px
+    font-size: 15px;
+    color: black
 }
 
 /* #text1 {
@@ -563,6 +570,15 @@ body {
     }
     100% {
         max-height: 350px
+    }
+}
+
+@keyframes rollUp {
+    100% {
+        height: 100%
+    }
+    0% {
+        height: 0px
     }
 }
 

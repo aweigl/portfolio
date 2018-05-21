@@ -47,6 +47,45 @@ class Main extends React.Component {
                         </div>
                         <div className="centerPiece">
                             <div className="citation">
+                                <h1>ICH BRENNE FÜR MARKEN</h1>
+                                <p>
+                                    Jede Organisation ist eine Marke. Weil sie
+                                    als System identifizierbar und also markiert
+                                    ist. Die Frage ist deshalb nicht, ob eine
+                                    Organisation eine erfolgreiche Marke hat.
+                                    Die Frage ist, wie die Organisation als
+                                    Marke auftritt. Hierfür braucht es die
+                                    Fähigkeit, in Verbindungen zu denken und zu
+                                    handeln. Genau das biete ich Ihnen.
+                                </p>
+                                <p>
+                                    Ich lenke Ihren Blick dabei vor allem auf
+                                    den Markenkern und die daraus erwachsenen
+                                    notwendigen Verbindungen, durch die Ihre
+                                    Marke eine überzeugende Gestalt wird. Beim
+                                    Auftritt Ihrer Marke biete ich Ihnen
+                                    außerdem meine mehrfach ausgezeichnete
+                                    Expertise.
+                                </p>
+                                <p>
+                                    Hier finden Sie Informationen zu meinen
+                                    Services in strategischer Marken Entwicklung
+                                    und in Full Service Dienstleistungen für
+                                    Marken Design.
+                                </p>
+                                <p>
+                                    Im Kontext der Markenentwicklungprozesse
+                                    arbeite ich auch als systemischer Coach in
+                                    der Begleitung von Veränderungs- und
+                                    Transformationsprozessen –{" "}
+                                    <a
+                                        href="https://www.coachpraxis-koeln.de/"
+                                        target="__blank"
+                                    >
+                                        hier finden Sie hier weitere
+                                        Informationen.
+                                    </a>
+                                </p>
                                 <p>
                                     Ohne ihr Erscheinungsbild ist die Marke
                                     nicht wahrnehmbar.
@@ -83,7 +122,7 @@ class Main extends React.Component {
                                 </p>
 
                                 <h1>
-                                    Marken Design ist (auch) meine Leidenschaft
+                                    MARKEN DESIGN IST (AUCH) MEINE LEIDENSCHAFT
                                 </h1>
                                 <p>
                                     Neben der strategischen Marken Beratung ist

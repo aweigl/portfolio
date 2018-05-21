@@ -23,7 +23,7 @@ class Stellland extends React.Component {
         setTimeout(() => {
             this.next();
             this.auto();
-        }, 5000);
+        }, 4000);
     }
     next() {
         this.state.imageId === 5
@@ -51,7 +51,7 @@ class Stellland extends React.Component {
         return (
             <div className="Component" id="stellland">
                 <div className="Text" id="stellland">
-                    <h1>STELLAND</h1>
+                    <h1>STELLLAND</h1>
                     STELLLAND Mitgliedermagazin DGfS Erscheinungsweise 4 x pro
                     Jahr ​ Chefredaktion Bildredaktion Gestaltung +
                     Reinzeichnung

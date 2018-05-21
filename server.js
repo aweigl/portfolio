@@ -11,6 +11,7 @@ const port = process.env.PORT || 3001;
 let corsMiddleware = (req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
     next();
 };
 
@@ -32,14 +33,13 @@ app.use(
 
 app.use(bodyParser.json());
 
-app.post("/api", corsMiddleware, (req, res) => {
+app.post("/api/mail", corsMiddleware, (req, res) => {
     console.log(req.body);
     let mailOptions = {
         to: "a.weigl1991@gmail.com", // list of receivers
         subject: `${req.body.subject}`, // Subject line
-        text: `${req.body.message} 
-        gesendet von
-         ${req.body.name}/${req.body.mail} um ${new Date()}` // plain text body
+        text: `${req.body.message} gesendet von ${req.body.name}
+        ${req.body.mail} um ${new Date()}` // plain text body
     };
 
     // send mail with defined transport object

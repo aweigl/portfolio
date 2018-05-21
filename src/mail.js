@@ -15,17 +15,17 @@ class Mail extends React.Component {
             subject: this.subject.value,
             message: this.message.value
         };
-        const response = await axios.post(
-            "http://192.168.50.155:3001/api",
-            message
-        );
-
-        if (!response.data.success) {
-            console.log("No success");
+        try {
+            const response = await axios.post("/api/mail", message);
+            if (!response.data.success) {
+                console.log("No success");
+            }
+            this.setState({
+                mailSent: true
+            });
+        } catch (e) {
+            console.log(e);
         }
-        this.setState({
-            mailSent: true
-        });
     }
     render() {
         return (

@@ -24,7 +24,7 @@ class Bio extends React.Component {
                         Für meine Arbeiten bin ich mehrfach ausgezeichnet
                         worden.
                         <a href="stephanieCV.pdf" target="_blank">
-                            <img src="cv2.png" />
+                            <img src="cv2.png" alt="" />
                         </a>
                     </div>
                 </div>

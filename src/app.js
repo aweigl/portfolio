@@ -24,7 +24,7 @@ class App extends React.Component {
                                     });
                                 }}
                             >
-                                <img src="MainBg.png" />
+                                <img src="MainBg2.png" alt="" />
                             </a>
                         </div>
                     )}

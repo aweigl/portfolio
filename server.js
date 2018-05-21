@@ -1,5 +1,5 @@
 const express = require("express");
-if (process.env.PASS) {
+if (process.env.NODE_ENV) {
     const mail = process.env.MAIL;
     const pass = process.env.PASS;
 }
@@ -16,9 +16,10 @@ const app = express();
 const port = 3001;
 
 let corsMiddleware = (req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    res.setHeader(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
     next();
 };
 
@@ -65,5 +66,5 @@ app.options("/api", corsMiddleware, (req, res, next) => {
     res.sendStatus(200);
 });
 app.listen(port, () =>
-    console.log(`Listening on port ${port}, ${process.env.PASS}`)
+    console.log(`Listening on port ${port}, ${process.env.NODE_ENV}`)
 );

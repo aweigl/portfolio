@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
@@ -8,9 +7,9 @@ export default function Footer() {
                 <div className="CR">© 2018 Aaron Weigl</div>
                 <span>Impressum</span>
                 <div className="icons">
-                    <Link to="/mail">
+                    <a className="mailto" href="a.weigl1991@gmail.com">
                         <i id="mail" className="far fa-envelope" size="3x" />
-                    </Link>
+                    </a>
                     <a
                         href="https://twitter.com/stephhartung"
                         target="_blank"

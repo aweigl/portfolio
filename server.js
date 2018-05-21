@@ -1,5 +1,7 @@
 const express = require("express");
-const info = require("./secrets.json");
+if (!process.env) {
+    const info = require("./secrets.json");
+}
 const https = require("https");
 const axios = require("axios");
 const nodemailer = require("nodemailer");

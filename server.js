@@ -1,6 +1,11 @@
 const express = require("express");
-if (!process.env) {
+if (!process.env.PASS) {
     const info = require("./secrets.json");
+    mail = info.mail;
+    pass = info.pass;
+} else {
+    mail = process.env.MAIL;
+    pass = process.env.PASS;
 }
 const https = require("https");
 const axios = require("axios");
@@ -22,8 +27,8 @@ let transporter = nodemailer.createTransport({
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-        user: process.env.MAIL || info.mail,
-        pass: process.env.PASS || info.pass
+        user: mail,
+        pass: pass
     }
 });
 

@@ -8,7 +8,7 @@ const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 
 const app = express();
-const port = process.env.PORT || 3001;
+// const port = process.env.PORT || 3001;
 
 let corsMiddleware = (req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -59,4 +59,4 @@ app.post("/api/mail", corsMiddleware, (req, res) => {
 app.options("/api", corsMiddleware, (req, res, next) => {
     res.sendStatus(200);
 });
-app.listen(port, () => console.log(`Listening on port ${port}`));
+// app.listen(port, () => console.log(`Listening on port ${port}`));

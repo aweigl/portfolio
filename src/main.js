@@ -21,7 +21,7 @@ class Main extends React.Component {
                 <img alt="" src="/images/Koeln/KoelnKoelnerWirMain.jpg" />
               </Link>{" "}
               <Link to="/stellland">
-                <img alt="" src="/images/Stellland/StelllandMain.jpg" />
+                <img alt="" src="/images/Stellland/STELLLANDMAIN.jpg" />
               </Link>{" "}
               <Link to="dirak">
                 <img alt="" src="/images/Dirak/DirakMain.jpg" />
